@@ -1,13 +1,12 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/x/assets/(.*)", "destination": "/assets/$1" },
-    { "source": "/x/favicon.png", "destination": "/favicon.png" },
-    { "source": "/x/logo.png", "destination": "/logo.png" },
-    { "source": "/x", "destination": "/index.html" },
-    { "source": "/x/", "destination": "/index.html" },
-    { "source": "/x/(.*)", "destination": "/index.html" }
+    { "source": "/x/assets/(.*)", "destination": "/dist/assets/$1" },
+    { "source": "/x/favicon.png", "destination": "/dist/favicon.png" },
+    { "source": "/x/logo.png", "destination": "/dist/logo.png" },
+    { "source": "/x", "destination": "/dist/index.html" },
+    { "source": "/x/", "destination": "/dist/index.html" },
+    { "source": "/x/(.*)", "destination": "/dist/index.html" }
   ],
   "headers": [
     {
@@ -28,12 +27,6 @@
       "source": "/x/assets/woff/(.*)",
       "headers": [
         { "key": "Content-Type", "value": "font/woff" },
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    },
-    {
-      "source": "/assets/(.*)",
-      "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
