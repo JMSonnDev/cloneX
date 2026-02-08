@@ -25,9 +25,37 @@
       ]
     },
     {
+      "source": "/x/assets/woff/(.*)",
+      "headers": [
+        { "key": "Content-Type", "value": "font/woff" },
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
       "source": "/assets/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/x",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" },
+        { "key": "Pragma", "value": "no-cache" }
+      ]
+    },
+    {
+      "source": "/x/",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" },
+        { "key": "Pragma", "value": "no-cache" }
+      ]
+    },
+    {
+      "source": "/x/((?!assets/).*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" },
+        { "key": "Pragma", "value": "no-cache" }
       ]
     },
     {
