@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router";
 import { useContext, useEffect, useRef, useState } from "react";
 import LogoX from ".././LogoX/LogoX";
 import { HomeIcon as HomeSolid } from "@heroicons/react/24/solid";
@@ -27,7 +27,7 @@ import LeftPanelItem from "./LeftPanelItem/LeftPanelItem";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../store/authContext";
 import { useQueryClient } from "@tanstack/react-query";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 const ESSENTIAL_ITEMS = ["Accueil", "Explorer", "Notifications", "Messages", "Profil"];
 

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { SearchContext } from "../../store/searchContext";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 
 export default function RightPanel() {
 	const { setSearchQuery } = useContext(SearchContext);

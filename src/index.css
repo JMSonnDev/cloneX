@@ -1,6 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-chirp: "Chirp", verdana, sans-serif;
+  --font-chirpbold: "Chirp-Bold", verdana, sans-serif;
+}
 
 @font-face {
   font-family: "Chirp";

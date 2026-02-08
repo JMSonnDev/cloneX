@@ -3,10 +3,10 @@ import { toast } from "react-toastify";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { AuthContext } from "../store/authContext";
 import { SearchContext } from "../store/searchContext";
-import { NavLink, Navigate } from "react-router-dom";
+import { NavLink, Navigate } from "react-router";
 import Loading from "../components/Loading/Loading";
 import { ChatBubbleLeftIcon } from "@heroicons/react/24/outline";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function Home() {
   const { user, loading, auth } = useContext(AuthContext);

@@ -1,4 +1,4 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { useContext, useRef, useState, useEffect } from "react"; // Ajoutez useEffect
@@ -6,7 +6,7 @@ import { AuthContext } from "../store/authContext";
 import LogoX from "../components/LogoX/LogoX";
 import { getAuth, updateProfile } from "firebase/auth";
 import Loading from "../components/Loading/Loading";
-import { motion, AnimatePresence } from "framer-motion"; // Ajouter l'import
+import { motion, AnimatePresence } from "motion/react";
 
 // Page de création de compte de X.com
 export default function Login() {
@@ -93,10 +93,7 @@ export default function Login() {
 		setLoading(true);
 
 		try {
-			const userCredential = await loginUser(
-				data.emailLogin,
-				data.passwordLogin
-			);
+			await loginUser(data.emailLogin, data.passwordLogin);
 			setLoading(false);
 			toast.success(`Enfin de retour ${getAuth().currentUser.displayName}!`);
 		} catch (error) {

@@ -2,11 +2,8 @@ import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./utils/query";
-import {
-	createBrowserRouter,
-	Navigate,
-	RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router";
+import { RouterProvider } from "react-router/dom";
 import { lazy, Suspense } from "react";
 import Error from "./pages/Error";
 import { ToastContainer } from "react-toastify";
@@ -185,13 +182,7 @@ export default function App() {
 				),
 			},
 		],
-		{
-			basename: "/x",
-			future: {
-				v7_startTransition: true,
-				v7_relativeSplatPath: true,
-			},
-		}
+		{ basename: "/x" }
 	);
 
 	return (
@@ -205,13 +196,7 @@ export default function App() {
 			/>
 			<QueryClientProvider client={queryClient}>
 				<SearchProvider>
-					<RouterProvider
-						router={router}
-						future={{
-							v7_startTransition: true,
-							v7_relativeSplatPath: true,
-						}}
-					/>
+					<RouterProvider router={router} />
 				</SearchProvider>
 			</QueryClientProvider>
 			{import.meta.env.PROD && <Analytics mode="production" debug={false} />}

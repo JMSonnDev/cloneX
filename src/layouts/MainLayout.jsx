@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 import RightPanel from "../components/RightPanel/RightPanel";
 import LeftPanel from "../components/LeftPanel/LeftPanel";
 

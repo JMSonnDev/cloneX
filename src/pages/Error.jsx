@@ -1,4 +1,4 @@
-import { useRouteError, Link } from "react-router-dom";
+import { useRouteError, Link } from "react-router";
 import LogoX from "../components/LogoX/LogoX";
 
 export default function Error() {

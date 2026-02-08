@@ -3,9 +3,9 @@ import { SearchContext } from "../store/searchContext";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { AuthContext } from "../store/authContext";
 import { toast } from "react-toastify";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 import { ChatBubbleLeftIcon } from "@heroicons/react/24/outline";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import Loading from "../components/Loading/Loading";
 
 export default function Explore() {

@@ -1,11 +1,11 @@
 import { CalendarIcon } from "@heroicons/react/20/solid";
 import { ChatBubbleLeftIcon } from "@heroicons/react/24/outline";
 import { useContext, useEffect, useState, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 import { AuthContext } from "../store/authContext";
 import { toast } from "react-toastify";
 import Loading from "../components/Loading/Loading";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { useQueryClient } from "@tanstack/react-query"; // Ajoutez cette ligne
 
 export default function Profile() {
