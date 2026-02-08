@@ -1,6 +1,9 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "redirects": [
+    { "source": "/", "destination": "/x", "permanent": false }
+  ],
   "rewrites": [
     { "source": "/x/assets/(.*)", "destination": "/assets/$1" },
     { "source": "/x/favicon.png", "destination": "/favicon.png" },
