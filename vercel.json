@@ -6,6 +6,8 @@
     { "source": "/x/assets/:path*", "destination": "/assets/:path*" },
     { "source": "/x/favicon.png", "destination": "/favicon.png" },
     { "source": "/x/logo.png", "destination": "/logo.png" },
+    { "source": "/x", "destination": "/index.html" },
+    { "source": "/x/", "destination": "/index.html" },
     { "source": "/x/:path*", "destination": "/index.html" }
   ],
   "headers": [
