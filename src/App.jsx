@@ -9,7 +9,6 @@ import Error from "./pages/Error";
 import { ToastContainer } from "react-toastify";
 import Loading from "./components/Loading/Loading";
 import SearchProvider from "./store/SearchProvider";
-import { Analytics } from "@vercel/analytics/react";
 
 const ProtectedRoute = lazy(() =>
 	import("./components/ProtectedRoute/ProtectedRoute")
@@ -199,7 +198,6 @@ export default function App() {
 					<RouterProvider router={router} />
 				</SearchProvider>
 			</QueryClientProvider>
-			{import.meta.env.PROD && <Analytics mode="production" debug={false} />}
 		</>
 	);
 }
