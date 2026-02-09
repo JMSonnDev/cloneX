@@ -3,44 +3,44 @@
     { "source": "/", "destination": "/x", "permanent": false }
   ],
   "rewrites": [
-    { "source": "/x/assets/:path*", "destination": "/assets/:path*" },
+    { "source": "/x/assets/(.*)", "destination": "/assets/$1" },
     { "source": "/x/favicon.png", "destination": "/favicon.png" },
     { "source": "/x/logo.png", "destination": "/logo.png" },
     { "source": "/x", "destination": "/index.html" },
     { "source": "/x/", "destination": "/index.html" },
-    { "source": "/x/:path*", "destination": "/index.html" }
+    { "source": "/x/(.*)", "destination": "/index.html" }
   ],
   "headers": [
     {
-      "source": "/x/assets/js/:path*",
+      "source": "/x/assets/js/(.*)",
       "headers": [
         { "key": "Content-Type", "value": "application/javascript" },
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
-      "source": "/x/assets/css/:path*",
+      "source": "/x/assets/css/(.*)",
       "headers": [
         { "key": "Content-Type", "value": "text/css" },
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
-      "source": "/x/assets/woff/:path*",
+      "source": "/x/assets/woff/(.*)",
       "headers": [
         { "key": "Content-Type", "value": "font/woff" },
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
-      "source": "/x/:path*",
+      "source": "/x/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" },
         { "key": "Pragma", "value": "no-cache" }
       ]
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" },
         {
@@ -50,6 +50,5 @@
       ]
     }
   ],
-  "cleanUrls": true,
   "trailingSlash": false
 }
