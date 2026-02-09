@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node -e \"require('fs').copyFileSync('vercel.json', 'dist/vercel.json')\"",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
